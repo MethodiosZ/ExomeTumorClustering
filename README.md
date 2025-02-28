@@ -1,4 +1,4 @@
   # ExomeTumorClustering
 Author: Methodios Zacharioudakis
 
-find . -type f \( -name "?????.fq.gz" -o -name "??????.fq.gz" \) | sort -u > datafortrimming.txt
+find . -type f \( -name "?????.fq.gz" -o -name "??????.fq.gz" \) | sort -u > rawdata.txt
