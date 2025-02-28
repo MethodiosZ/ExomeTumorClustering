@@ -1,3 +1,3 @@
-# ExomeTumorClustering
-# Author: Methodios Zacharioudakis
+  # ExomeTumorClustering
+Author: Methodios Zacharioudakis
 
