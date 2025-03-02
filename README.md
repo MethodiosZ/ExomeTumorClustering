@@ -4,3 +4,4 @@
 #### `./QualityControlRaw.sh`
 #### `./DataTrimming.sh`
 #### `cd trimmeddata/paired`
+#### `find . -type f -name "*.fq.gz" | sort > trimdata.txt`
