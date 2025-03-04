@@ -13,3 +13,5 @@
 #### `find . -type f -name "*.bam" | sort > deduped.txt`
 #### `./SnpCalling.sh`
 #### `cd snpdata`
+#### `find . -type f -name "*.bcf" | sort > snps.txt`
+#### `./Normalize.sh`
