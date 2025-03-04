@@ -15,3 +15,5 @@
 #### `cd snpdata`
 #### `find . -type f -name "*.bcf" | sort > snps.txt`
 #### `./Normalize.sh`
+#### `bcftools merge --write-index --threads 8 MB1_snps.bcf MB2_snps.bcf MB3_snps.bcf MB4_snps.bcf MB5_snps.bcf MB6_snps.bcf MB7_snps.bcf MB8_snps.bcf MB9_snps.bcf MB10_snps.bcf -O b -o merged.bcf`
+#### `bcftools view --threads 8 merged.bcf > merged.vcf`
