@@ -9,3 +9,5 @@
 #### `./MappingData.sh`
 #### `cd mappeddata`
 #### `find . -type f -name "*.sam" | sort > mapped.txt`
+#### `./MarkDuplicates.sh`
+#### `find . -type f -name "*.bam" | sort > deduped.txt`
