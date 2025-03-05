@@ -56,7 +56,7 @@ with open("nomissmerged",'r') as input:
         print("Error: Sample missing in vcf!")
         break
       elif 3 not in resultlist:
-        alllist.append(result.list)
+        alllist.append(resultlist)
 
 resultarr=np.array(alllist)
 tparr=np.transpose(resultarr)
@@ -67,7 +67,7 @@ nrow=norm_data.shape[0]
 linkage_data=linkage(norm_data,method='complete')
 clusters=fcluster(linkage_data,2,criterion='maxclust')
 tags=[]
-for sample,clustlbl in enumarate(clusters):
+for sample,clustlbl in enumerate(clusters):
   tags.append(clustlbl)
 maxclust=max(clusters)
 dist=linkage_data[:,2]
@@ -85,9 +85,11 @@ plt.xlabel("Principal Component 1")
 plt.ylabel("Principal Component 2")
 plt.title("2 Components PCA")
 colors=np.array(["black","dimgray","red","sienna","darkorange","green","teal","deepskyblue","navy","darkviolet"])
-plt.scatter(principal_components[:,0],principal_components[:,1],c=colors,label=labels)
+for i in range(samples):
+  plt.scatter(principal_components[i,0],principal_components[i,1],color=colors[i],label=labels[i],s=100)
 plt.grid()
 plt.legend(title="Samples",bbox_to_anchor=(1.05,1),loc='upper left',ncol=1)
+plt.subplots_adjust(right=0.75)
 plt.savefig("PCA.png")
 plt.close()
 print("PCA finished.")
